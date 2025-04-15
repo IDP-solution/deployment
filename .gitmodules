@@ -1,3 +1,6 @@
 [submodule "services/auth_service"]
 	path = services/auth_service
 	url = git@github.com:IDP-solution/auth_service.git
+[submodule "services/io_service"]
+	path = services/io_service
+	url = git@github.com:IDP-solution/io_service.git
