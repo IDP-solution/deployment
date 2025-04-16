@@ -1,0 +1,18 @@
+_format_version: "2.1"
+
+services:
+  - name: auth_service
+    url: http://auth_service:8080/
+    routes:
+      - name: auth_service_auth
+        paths: 
+          - /api/authorization/
+        strip_path: false
+          
+  # - name: db-adminer
+  #   url: http://labkong_adminer:8080
+  #   routes:
+  #     - name: adminer-service
+  #       paths:
+  #         - /adminer
+
