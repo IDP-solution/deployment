@@ -1,2 +1,5 @@
-[X] - Add a DB
-[X] - Add IO Service to directly communicate with the DB
+## something
+### yada yada
+
+- [x] Add a DB
+- [ ] Add IO Service to directly communicate with the DB
