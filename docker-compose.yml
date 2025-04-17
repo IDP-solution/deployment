@@ -59,6 +59,7 @@ services:
       internal:
         aliases:
           - db_svc
+      database-admin:
 ###############################################
   agent:
     image: portainer/agent:2.11.1
@@ -88,6 +89,13 @@ services:
       replicas: 1
       placement:
         constraints: [node.role == manager]
+###############################################
+  adminer:
+    image: adminer
+    ports:
+        - 8090:8080
+    networks:
+        - database-admin
 
 volumes:
     db-volume:
@@ -99,6 +107,5 @@ networks:
     agent_network:
       driver: overlay
       attachable: true
-#     books:
-#     database:
-#     database-admin:
+    database-admin:
+      driver: overlay
