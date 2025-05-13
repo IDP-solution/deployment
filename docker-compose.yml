@@ -30,6 +30,7 @@ services:
       - io_service
     ports:
       - "8081:8080"
+      - "5001:5000"
     networks:
       internal:
         aliases:
@@ -41,10 +42,13 @@ services:
       - db
     ports:
       - "8080:8080"
+      - "5000:5000"
     networks:
       internal:
         aliases:
           - io_svc
+    deploy:
+      replicas: 1
 ###############################################
   db:
     image: postgres:13.2-alpine
@@ -170,3 +174,4 @@ networks:
       attachable: true
     database-admin:
     prometheus_kong:
+    grafana_prometheus:
